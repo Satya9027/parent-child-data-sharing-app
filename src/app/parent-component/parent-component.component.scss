@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 550px;
+    width: 550px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #58555569;
+    color: black;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.destroy-btn {
+    font-size: 18px;
+    margin: 0 auto;
+    padding: 3px 10px;
+}

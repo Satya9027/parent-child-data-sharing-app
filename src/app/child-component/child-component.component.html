@@ -1,0 +1,17 @@
+<div class="text-box">
+  <label for="input"
+    >Input Field:
+    <input
+      name="input"
+      id="input"
+      type="number"
+      [(ngModel)]="inputValue"
+      placeholder="Type a value"
+      (focus)="clearValue()"
+    />
+  </label>
+  <p>this is child component value of @Input: {{ parentToChild }}</p>
+</div>
+<button class="button" (click)="sendToParent()">send to parent</button>
+
+<button (click)="generateOtp()">generate otp</button>

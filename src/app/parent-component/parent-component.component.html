@@ -1,0 +1,26 @@
+<div class="container">
+  <div style="margin-bottom: 16px; font-size: 14px">
+    <h4>Input some number to update in child component</h4>
+    <label for="inputText"
+      >Type a number
+      <input
+        type="number"
+        [(ngModel)]="dataFromParentToChild"
+        name="parent-text"
+        id="inputText"
+        placeholder="type a number"
+      />
+    </label>
+  </div>
+  <app-child-component
+    *ngIf="showChildComponent"
+    [parentToChild]="dataFromParentToChild"
+    (sendOtpEventEmitter)="receiveOtpFromChild($event)"
+    (sendToParentEventEmitter)="receiveDataFromChild($event)"
+  ></app-child-component>
+  <div>Number of values @Output: {{ receivedChildData }}</div>
+  <div>Received OTP Event Emitter: {{ receivedOtp }}</div>
+</div>
+<div style="display: flex; width: 550px; justify-content: center">
+  <button (click)="onDestroy()" class="destroy-btn">Destroy</button>
+</div>
